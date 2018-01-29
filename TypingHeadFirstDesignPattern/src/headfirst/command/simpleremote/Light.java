@@ -3,8 +3,8 @@ package headfirst.command.simpleremote;
 public class Light {
 	String location = "";
 
-	public Light(String location) {
-		this.location = location;
+	public Light() {
+		
 	}
 	
 	
