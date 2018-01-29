@@ -1,4 +1,4 @@
-package headfirst.command;
+package headfirst.command.simpleremote;
 
 public class Light {
 	String location = "";
