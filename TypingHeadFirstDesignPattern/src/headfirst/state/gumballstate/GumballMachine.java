@@ -4,10 +4,10 @@ import javax.sound.sampled.SourceDataLine;
 
 public class GumballMachine {
 	/* 모든 상태 객체를 선언합니다. */
-	State soldOutState;
-	State noQuarterState;
-	State hasQuarterState;
-	State soldState;
+	State soldOutState;							// 매진상태
+	State noQuarterState;						// 동전없음
+	State hasQuarterState;						// 동전있음
+	State soldState;							// 알맹이판매
 	
 	State state = soldOutState;					// 상태 인스턴스 변수 (State 형식)
 	int count = 0;								// count 인스턴스 변수에는 알맹이 갯수가 저장됩니다.
