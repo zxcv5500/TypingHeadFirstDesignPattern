@@ -36,6 +36,10 @@ public class GumballMachine {
 		state.dispense();
 	}
 	
+	public void setState(State state) {
+		this.state = state; 
+	}
+	
 	void releaseBall() {
 		System.out.println("껌볼이 슬롯 밖으로 나갔습니다.");
 		if (count != 0) {
