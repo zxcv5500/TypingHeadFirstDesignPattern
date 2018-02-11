@@ -16,6 +16,9 @@ public class GumballMachine {
 		}
 	}
 	
+	/**
+	 * 동전 투입
+	 */
 	public void insertQuarter() {
 		if (state == HAS_QUARTER) {
 			System.out.println("동전은 한 개만 넣어 주세요");
@@ -29,6 +32,10 @@ public class GumballMachine {
 		}
 	}
 	
+	
+	/**
+	 * 동전 반환
+	 */
 	public void ejectQuarter() {
 		if (state == HAS_QUARTER) {
 			System.out.println("동전이 반환됩니다.");
@@ -42,6 +49,9 @@ public class GumballMachine {
 		
 	} 
 	
+	/**
+	 * 손잡이 돌림
+	 */
 	public void turnCrank() {
 		if (state == SOLD) {
 			System.out.println("손잡이는 한번만 돌려 주세요.");
@@ -57,6 +67,9 @@ public class GumballMachine {
 		
 	}
 	
+	/**
+	 * 알맹이 내보냄
+	 */
 	public void dispense() {
 		if (state == SOLD) {
 			System.out.println("알맹이가 나가고 있습니다.");
