@@ -1,11 +1,15 @@
 package headfirst.iterator.dinermerger;
 
-public class DinnerMenu {
+public class DinerMenu {
 	static final int MAX_ITEMS = 6;
 	int numberOfItems = 0;
 	MenuItem[] menuItems;
 	
-	public DinnerMenu() {
+	
+	/**
+	 * 생성자
+	 */
+	public DinerMenu() {
 		menuItems = new MenuItem[MAX_ITEMS];
 		
 		addItem("채식주의자용 BLT",
@@ -28,7 +32,18 @@ public class DinnerMenu {
 		}
 	}
 	
+	/**
+	 * 더이상 필요 없는 메소드. 내부 구조를 다 드러내는 단점이 있기 때문에 없애는 게 낮죠
+	 * @deprecated
+	 * @return
+	 */
 	public MenuItem[] getMenuItems() {
 		return menuItems;
 	}
+	
+	public Iterator createIterator() {
+		return new DinerMenuIterator(menuItems);
+	}
+	
+	// 기타 메뉴 관련 메소드
 }
