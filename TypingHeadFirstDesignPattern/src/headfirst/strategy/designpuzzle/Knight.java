@@ -4,7 +4,7 @@ public class Knight extends Character {
 
 	public Knight(WeaponBehavior weaponBehavior) {
 		super(weaponBehavior);
-		// TODO Auto-generated constructor stub
+		characterName = "기사";
 	}
 
 	@Override

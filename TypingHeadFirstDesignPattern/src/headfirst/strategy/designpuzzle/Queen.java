@@ -6,12 +6,12 @@ public class Queen extends Character {
 	
 	public Queen(WeaponBehavior weaponBehavior) {
 		super(weaponBehavior);
-		// TODO Auto-generated constructor stub
+		characterName = "여왕";
 	}
 
 	@Override
 	public void fight() {
-		System.out.println("여왕이 싸웁니다.");
+		System.out.printf("%s이 싸웁니다.", characterName);
 	}
 
 }

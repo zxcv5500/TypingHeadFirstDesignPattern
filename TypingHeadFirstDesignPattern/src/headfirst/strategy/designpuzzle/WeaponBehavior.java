@@ -1,5 +1,5 @@
 package headfirst.strategy.designpuzzle;
 
 public interface WeaponBehavior {
-	void useWeapon();
+	void useWeapon(String name);
 }

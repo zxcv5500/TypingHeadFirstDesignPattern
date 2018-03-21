@@ -4,12 +4,12 @@ public class Troll extends Character {
 
 	public Troll(WeaponBehavior weaponBehavior) {
 		super(weaponBehavior);
-		// TODO Auto-generated constructor stub
+		characterName = "트롤";
 	}
 
 	@Override
 	public void fight() {
-		System.out.println("트롤이 싸웁니다.");
+		System.out.println(characterName + "이 싸웁니다.");
 	}
 
 }
