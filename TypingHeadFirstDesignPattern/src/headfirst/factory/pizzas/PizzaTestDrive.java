@@ -10,7 +10,7 @@ public class PizzaTestDrive {
 		System.out.println("We ordered a " + pizza.getName() + "\n");
 		
 		pizza = store.orderPizza("veggie");
-		System.out.println("We ordered a " + pizza.getName());
+		System.out.println("We ordered a " + pizza.getName() + "\n");
 	}
 
 }
