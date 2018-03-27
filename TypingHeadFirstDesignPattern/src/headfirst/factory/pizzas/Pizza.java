@@ -10,32 +10,37 @@ abstract public class Pizza {		// 우선 Pizza 추상 클래스를 만든 다음
 	ArrayList toppings = new ArrayList();
 	//*/
 	
+	public String getName() {
+		return name;
+	}
+	
 	void prepare() {
 		System.out.println("Preparing " + name);
-		System.out.println("Tossing dough...");
-		System.out.println("Adding sauce...");
-		System.out.println("Adding toppings : ");
-		for (int i = 0; i < toppings.size(); i++) {
-			System.out.println("    " + toppings.get(i));
-		}
 	}
 	
 	void bake() {
-		System.out.println("Bake for 25 minutes at 350");
+		System.out.println("Bakeing" + name);
 	}
 	
 	void cut() {
-		System.out.println("Cutting the pizza into diagonal slice");
+		System.out.println("Cutting " + name);
 	}
 	
 	void box() {
-		System.out.println("Place pizza in official PizzaStore box");
+		System.out.println("Boxing" + name);
 	}
 
 	@Override
 	public String toString() {
-		
-		return name;
+		// code to display pizza name and ingredients
+		StringBuffer display = new StringBuffer();
+		display.append("----" + name + "---\n");
+		display.append(dough + "\n");
+		display.append(sauce + "\n");
+		for (int i = 0; i < toppings.size(); i++) {
+			display.append((String) toppings.get(i) + "\n");
+		}
+		return display.toString();
 	}
 	
 	
