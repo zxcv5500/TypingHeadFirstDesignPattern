@@ -26,7 +26,7 @@ public class NYPizzaIngredientFactory implements PizzaIngredientFactory {
 
 	@Override
 	public Veggies[] createVeggies() {
-		Veggies[] veggies = { new Garlic(, new Onion(), new Mushroom(), new RedPepper() };		// 야채의 경우는 야채들로 구성된 배열을 리턴하도록 합니다. 
+		Veggies[] veggies = { new Garlic(), new Onion(), new Mushroom(), new RedPepper() };		// 야채의 경우는 야채들로 구성된 배열을 리턴하도록 합니다. 
 																								//여기에서는 야채들을 만드는 부분을 직접 하드 코딩했습니다. 이부분도
 		return veggies;																			//조금 더 복잡하게 만들 수 있겠지만, 팩토리 패턴을 학습하는 과정에서는 별로 필요할 것 같지 않아서 그냥 간단하게 했습니다.
 	}
