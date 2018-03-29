@@ -13,7 +13,7 @@ public class CaliforniaPizzaStore extends PizzaStore {
 			return new CaliforniaVeggiePizza();
 		} else if ("pepperoni".equals(item)) {
 			return new CaliforniaPepperoniPizza();
-		}
+		} else return null;
 		
 	}
 
