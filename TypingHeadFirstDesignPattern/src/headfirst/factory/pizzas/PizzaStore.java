@@ -11,7 +11,7 @@ public class PizzaStore {
 	public Pizza orderPizza(String type) {
 		Pizza pizza;
 		
-		pizza = factory.createPizza(type);
+		pizza = factory.createPizza(type);				// 피자를 생성하는 부분만 바뀐다. 바뀌는 부분은 캡슐화 한다.
 		
 		pizza.prepare();
 		pizza.bake();
