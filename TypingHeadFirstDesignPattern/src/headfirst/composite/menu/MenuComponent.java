@@ -25,7 +25,7 @@ public abstract class MenuComponent {
 		throw new UnsupportedOperationException();
 	}
 	
-	public String getPrice() {
+	public Double getPrice() {
 		throw new UnsupportedOperationException();
 	}
 	
