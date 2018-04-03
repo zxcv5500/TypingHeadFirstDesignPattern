@@ -4,17 +4,19 @@ public class DuckSimulator {
 
 	public static void main(String[] args) {
 		DuckSimulator simulator = new DuckSimulator();
-		simulator.simulate();
+		AbstractDuckFactory duckFactory = new CountingDuckFactory();
+		
+		simulator.simulate(duckFactory);
 	}
 	
-	void simulate() {
-		Quackable mallardDuck = new QuackCounter(new MallardDuck());				//new QuackCounter(Quackable quackable) 데코레이터로 감쌉니다.	
-		Quackable redheadDuck = new QuackCounter(new RedHeadDuck());
-		Quackable duckCall =    new QuackCounter(new DuckCall());
-		Quackable rubberDuck =  new QuackCounter(new RubberDuck());
-		Quackable gooseDuck =   new QuackCounter(new GooseAdapter(new Goose()));
+	void simulate(AbstractDuckFactory duckFactory) {
+		Quackable mallardDuck = duckFactory.createMallardDuck();	
+		Quackable redheadDuck = duckFactory.createRedheadDuck();
+		Quackable duckCall =    duckFactory.createDuckCall();
+		Quackable rubberDuck =  duckFactory.createRubberDuck();
+		Quackable gooseDuck =   new GooseAdapter(new Goose());
 		
-		System.out.println("\nDuck Simulator: With Decorator");
+		System.out.println("\nDuck Simulator: With Abstract Factory");
 		
 		simulate(mallardDuck);
 		simulate(redheadDuck);
