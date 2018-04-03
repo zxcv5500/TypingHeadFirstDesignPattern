@@ -1,6 +1,6 @@
 package headfirst.compound.factory;
 
-public abstract class CountingDuckFactory extends AbstractDuckFactory {
+public class CountingDuckFactory extends AbstractDuckFactory {
 
 	@Override
 	public Quackable createMallardDuck() {
