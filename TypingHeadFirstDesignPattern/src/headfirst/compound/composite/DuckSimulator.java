@@ -16,20 +16,41 @@ public class DuckSimulator {
 		Quackable rubberDuck =  duckFactory.createRubberDuck();
 		Quackable gooseDuck =   new GooseAdapter(new Goose());
 		
-		System.out.println("\nDuck Simulator: With Abstract Factory");
+		System.out.println("\nDuck Simulator: With Composite - Flocks");
 		
-		simulate(mallardDuck);
-		simulate(redheadDuck);
-		simulate(duckCall);
-		simulate(rubberDuck);
-		simulate(gooseDuck);
+		Flock flockOfDucks = new Flock();
 		
-		System.out.println("The ducks quacked " + QuackCounter.getQuacks() + " times");		// 꽥학자를 위해서 꽥소리를 낸 회수를 출력하는 부분
+		flockOfDucks.add(redheadDuck);
+		flockOfDucks.add(duckCall);
+		flockOfDucks.add(rubberDuck);
+		flockOfDucks.add(gooseDuck);
 		
+		Flock flockOfMallards = new Flock();
+		
+		Quackable mallardOne = duckFactory.createMallardDuck();
+		Quackable mallardTwo = duckFactory.createMallardDuck();
+		Quackable mallardThree = duckFactory.createMallardDuck();
+		Quackable mallardFour = duckFactory.createMallardDuck();
+		
+		flockOfMallards.add(mallardOne);
+		flockOfMallards.add(mallardTwo);
+		flockOfMallards.add(mallardThree);
+		flockOfMallards.add(mallardFour);
+		
+		flockOfDucks.add(flockOfMallards);
+		
+		
+		System.out.println("\nDuck Simulator : Whole Flock Simulation");
+		simulate(flockOfDucks);
+		
+		System.out.println("\nDuck Simulator : Mallard Flock Simulation");
+		simulate(flockOfMallards);
+		
+		System.out.println("\nThe ducks quacked " + QuackCounter.getQuacks() + " times");
 	}
 
 	void simulate(Quackable duck) {
-		duck.quack();
+		duck.quack();			// 이 부분은 전혀 고칠 필요가 없습니다. Flock도 결국은 Quackable이니까요.
 	}
 
 }
