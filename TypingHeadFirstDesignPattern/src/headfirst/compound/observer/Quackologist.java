@@ -7,4 +7,11 @@ public class Quackologist implements Observer {
 		System.out.println("Quackologist : " + duck + " just quacked");
 	}
 
+	@Override
+	public String toString() {
+		
+		return "Quackologist";
+	}
+
+	
 }
