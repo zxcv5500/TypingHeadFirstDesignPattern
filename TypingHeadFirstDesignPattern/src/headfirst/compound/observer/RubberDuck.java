@@ -25,8 +25,15 @@ public class RubberDuck implements Quackable {
 
 	@Override
 	public void notifyObservers() {
-		// TODO Auto-generated method stub
-		
+		observable.notifyObservers();
 	}
+
+	@Override
+	public String toString() {
+		
+		return "Redhead Duck";
+	}
+	
+	
 
 }
