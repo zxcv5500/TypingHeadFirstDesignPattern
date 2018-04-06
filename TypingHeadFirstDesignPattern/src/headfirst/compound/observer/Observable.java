@@ -1,8 +1,7 @@
 package headfirst.compound.observer;
 
 import java.util.ArrayList;
-
-import headfirst.iterator.dinermerger.Iterator;
+import java.util.Iterator;
 
 public class Observable implements QuackObservable {
 	ArrayList observers = new ArrayList<>();

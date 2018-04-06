@@ -20,11 +20,20 @@ public class QuackCounter implements Quackable {			// 어댑터를 만들때와 
 	public static int getQuacks() {
 		return numberOfQuacks;					// 메소드가 하나 추가됩니다. 이 정적 메소드에서는 모든 Quackable에서 꽥 소리를 낸 회수를 리턴해 줍니다.
 	}
+	
+	@Override
+	public void registerObserver(Observer observer) {
+		duck.registerObserver(observer);
+	}
+	@Override
+	public void notifyObservers() {
+		duck.notifyObservers();		
+	}
+	
 	@Override
 	public String toString() {
 		
 		return duck.toString();
 	}
-	
 
 }

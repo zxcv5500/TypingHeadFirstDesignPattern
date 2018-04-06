@@ -9,10 +9,10 @@ import java.util.Iterator;
  * 여기서는 Quackable이 잎 원소가 됩니다.
  */
 public class Flock implements Quackable {
-	ArrayList quackers = new ArrayList<>();				// Flock에 속하는 Quackable 객체들은 ArrayList에 저장합니다.
+	ArrayList ducks = new ArrayList<>();				// Flock에 속하는 Quackable 객체들은 ArrayList에 저장합니다.
 	
-	public void add(Quackable quacker) {				// Flock에 Quackable을 추가하기 위한 메소드
-		quackers.add(quacker);
+	public void add(Quackable duck) {				// Flock에 Quackable을 추가하기 위한 메소드
+		ducks.add(duck);
 	}
 	
 	
@@ -24,11 +24,35 @@ public class Flock implements Quackable {
 	 */
 	@Override
 	public void quack() {		
-		Iterator iterator = quackers.iterator();
+		Iterator iterator = ducks.iterator();
 		while (iterator.hasNext()) {
-			Quackable quacker = (Quackable) iterator.next();
-			quacker.quack();
+			Quackable duck = (Quackable) iterator.next();
+			duck.quack();
 		}	
 	}
+
+
+	@Override
+	public void registerObserver(Observer observer) {
+		Iterator iterator = ducks.iterator();
+		while (iterator.hasNext()) {
+			Quackable duck = (Quackable) iterator.next();
+			duck.registerObserver(observer);
+		}
+		
+	}
+
+
+	@Override
+	public void notifyObservers() {			}
+
+
+	@Override
+	public String toString() {
+		
+		return "Flock of Ducks";
+	}
+	
+	
 
 }
