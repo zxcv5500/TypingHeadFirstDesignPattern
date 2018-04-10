@@ -1,9 +1,9 @@
 package headfirst.factory.pizzas;
 
 public class PizzaStore {
-	SimplePizzaFactory factory;
+	SimplePizzaFactory factory;								// PizzaStore에 SimplePizzaFactory에 대한 레퍼런스를 저장합니다.
 
-	public PizzaStore(SimplePizzaFactory factory) {
+	public PizzaStore(SimplePizzaFactory factory) {			// PizzaStore의 생성자에 팩토리 객체가 전달됩니다.
 		super();
 		this.factory = factory;
 	}
