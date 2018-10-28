@@ -1,9 +1,7 @@
 package headfirst.command.simpleremote;
 
 public class SimpleRemoteControl {
-	Command slot;
-	
-	
+	Command slot;	
 
 	public SimpleRemoteControl() {
 	

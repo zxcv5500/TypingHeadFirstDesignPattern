@@ -12,7 +12,6 @@ public class RemoteControlTest {
 		
 		GarageDoorOpenCommand garageDoorOpenUp = new GarageDoorOpenCommand(garageDoor);
 		
-		
 		remote.setCommand(lightOn);
 		remote.buttonWasPressed();
 		remote.setCommand(lightOff);
